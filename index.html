@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gandhi Rajan - Forward-Thinking Web Developer Specializing in HTML, CSS, JS, and Modern UI/UX.">
+    <meta name="keywords"
+        content="Gandhi Rajan, Web Developer, Portfolio, React, HTML, CSS, JavaScript, Modern Web Design">
+    <meta name="author" content="Gandhi Rajan">
+    <title>Gandhi Rajan | Modern Web Developer Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-outline"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <span class="loader-text">GANDHI</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">G<span>.</span>Rajan</a>
+            <div class="nav-links">
+                <a href="#hero" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Work</a>
+                <a href="#contact" class="nav-btn">Hire Me</a>
+            </div>
+            <div class="mobile-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-bg">
+                <canvas id="hero-particles"></canvas>
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+            </div>
+            <div class="container hero-content">
+                <div class="hero-text-area">
+                    <h2 class="sub-title">Hi there, I'm</h2>
+                    <h1 class="main-title">Gandhi Rajan<span class="dot">.</span></h1>
+                    <h3 class="typed-text">I build <span id="typing-effect"></span></h3>
+                    <p class="hero-desc">
+                        A passionate web developer specializing in creating high-performance,
+                        visually stunning, and user-friendly digital experiences.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="hero-image-area">
+                    <div class="image-wrapper glass">
+                        <img src="assets/hero-portrait.png" alt="Gandhi Rajan" id="hero-img">
+                        <div class="floating-badge badge-1 glass">
+                            <i class="fa-brands fa-react"></i>
+                            <span>React Pro</span>
+                        </div>
+                        <div class="floating-badge badge-2 glass">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Clean Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">The Developer Behind The Screen</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-content glass">
+                        <div class="about-text">
+                            <p>I am a dedicated web developer with a keen eye for aesthetics and a passion for coding.
+                                My journey started with a fascination for how things work on the internet, which led me
+                                to dive deep into HTML, CSS, and JavaScript.</p>
+                            <p>Over the years, I've honed my skills in modern frameworks line React, focusing on
+                                building applications that are not just functional, but also provide an exceptional user
+                                experience.</p>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-num">3+</span>
+                                <span class="stat-label">Years Exp.</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">50+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">100%</span>
+                                <span class="stat-label">Dedication</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section alternate">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-tag">My Expertise</span>
+                    <h2 class="section-title">Tech Stack & Skills</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="skills-grid">
+                    <!-- HTML5 -->
+                    <div class="skill-card glass" data-skill="HTML5">
+                        <i class="fa-brands fa-html5 color-html"></i>
+                        <h3>HTML5</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <!-- CSS3 -->
+                    <div class="skill-card glass" data-skill="CSS3">
+                        <i class="fa-brands fa-css3-alt color-css"></i>
+                        <h3>CSS3</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <!-- JS -->
+                    <div class="skill-card glass" data-skill="JavaScript">
+                        <i class="fa-brands fa-js color-js"></i>
+                        <h3>JavaScript</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <!-- React -->
+                    <div class="skill-card glass" data-skill="React">
+                        <i class="fa-brands fa-react color-react"></i>
+                        <h3>React</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass">
+                        <div class="project-img">
+                            <img src="assets/project1.png" alt="Project 1">
+                            <div class="project-overlay">
+                                <a href="#" class="view-btn"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Modern E-Commerce</h3>
+                            <p>A full-featured shopping experience with React.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>CSS3</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card glass">
+                        <div class="project-img">
+                            <img src="assets/project2.png" alt="Project 2">
+                            <div class="project-overlay">
+                                <a href="#" class="view-btn"><i class="fa-solid fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Creative Dashboard</h3>
+                            <p>Data visualization with elegant UI/UX design.</p>
+                            <div class="project-tags">
+                                <span>JS</span>
+                                <span>D3.js</span>
+                                <span>SCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section alternate">
+            <div class="container">
+                <div class="contact-wrapper glass">
+                    <div class="contact-info">
+                        <h2 class="section-title">Let's Work Together</h2>
+                        <p>Have a project in mind? Reach out and let's build something amazing together.</p>
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>gandhirajan@example.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Tamil Nadu, India</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message <i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2026 Gandhi Rajan. Designed with <i class="fa-solid fa-heart"></i> & Code.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
