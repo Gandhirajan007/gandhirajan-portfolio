@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Gandhi Rajan - Forward-Thinking Web Developer Specializing in HTML, CSS, JS, and Modern UI/UX.">
+        content="Personal portfolio of Gandhi Rajan S, a B.Tech Information Technology student and aspiring Full-Stack Developer interested in AI, Machine Learning, and modern web technologies.">
     <meta name="keywords"
-        content="Gandhi Rajan, Web Developer, Portfolio, React, HTML, CSS, JavaScript, Modern Web Design">
-    <meta name="author" content="Gandhi Rajan">
-    <title>Gandhi Rajan | Modern Web Developer Portfolio</title>
+        content="Gandhi Rajan, Full Stack Developer, B.Tech IT, Portfolio, Resume, React, Node.js, Python, Java, AI, ML, Web Developer">
+    <meta name="author" content="Gandhi Rajan S">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gandhi Rajan S | B.Tech IT Student | Full-Stack Developer">
+    <meta property="og:description"
+        content="Personal portfolio of Gandhi Rajan S, a B.Tech Information Technology student and aspiring Full-Stack Developer interested in AI, Machine Learning, and modern web technologies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gandhirajan.dev">
+    <meta property="og:image" content="assets/og-image.png">
+
+    <title>Gandhi Rajan S | B.Tech IT Student | Full-Stack Developer</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -18,11 +27,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -36,20 +45,24 @@
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader-content">
-            <span class="loader-text">GANDHI</span>
+            <span class="loader-text">GANDHI RAJAN</span>
             <div class="loader-bar"></div>
         </div>
     </div>
 
-    <!-- Navigation -->
+    <!-- ============ NAVIGATION ============ -->
     <nav id="navbar">
         <div class="container nav-wrapper">
             <a href="#" class="logo">G<span>.</span>Rajan</a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <a href="#hero" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
-                <a href="#projects">Work</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#building">Building</a>
+                <a href="#profiles">Profiles</a>
                 <a href="#contact" class="nav-btn">Hire Me</a>
             </div>
             <div class="mobile-toggle" id="mobile-menu">
@@ -61,7 +74,7 @@
     </nav>
 
     <main>
-        <!-- Hero Section -->
+        <!-- ============ HERO SECTION ============ -->
         <section id="hero">
             <div class="hero-bg">
                 <canvas id="hero-particles"></canvas>
@@ -71,28 +84,49 @@
             </div>
             <div class="container hero-content">
                 <div class="hero-text-area">
-                    <h2 class="sub-title">Hi there, I'm</h2>
-                    <h1 class="main-title">Gandhi Rajan<span class="dot">.</span></h1>
+                    <h2 class="sub-title">Hello, I'm</h2>
+                    <h1 class="main-title">Gandhi Rajan S<span class="dot">.</span></h1>
                     <h3 class="typed-text">I build <span id="typing-effect"></span></h3>
                     <p class="hero-desc">
-                        A passionate web developer specializing in creating high-performance,
-                        visually stunning, and user-friendly digital experiences.
+                        A passionate B.Tech Information Technology student and aspiring Full-Stack Developer,
+                        interested in building modern web applications, intelligent systems, and innovative
+                        technology solutions.
                     </p>
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                        <a href="#projects" class="btn btn-primary">View My Work <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="assets/resume.pdf" class="btn btn-outline" download>Download Resume <i
+                                class="fa-solid fa-download"></i></a>
+                        <a href="#contact" class="btn btn-ghost">Let's Talk <i
+                                class="fa-solid fa-paper-plane"></i></a>
                     </div>
                 </div>
                 <div class="hero-image-area">
                     <div class="image-wrapper glass">
-                        <img src="assets/hero-portrait.png" alt="Gandhi Rajan" id="hero-img">
+                        <img src="assets/hero-portrait.png" alt="Gandhi Rajan S — Professional Portrait" id="hero-img">
                         <div class="floating-badge badge-1 glass">
                             <i class="fa-brands fa-react"></i>
-                            <span>React Pro</span>
+                            <span>React</span>
                         </div>
                         <div class="floating-badge badge-2 glass">
-                            <i class="fa-solid fa-code"></i>
-                            <span>Clean Code</span>
+                            <i class="fa-brands fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="floating-badge badge-3 glass">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="floating-badge badge-4 glass">
+                            <i class="fa-solid fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="floating-badge badge-5 glass">
+                            <i class="fa-brands fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="floating-badge badge-6 glass">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>AI/ML</span>
                         </div>
                     </div>
                 </div>
@@ -102,36 +136,64 @@
             </a>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
+        <!-- ============ ABOUT SECTION ============ -->
+        <section id="about" class="section-alt">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">About Me</span>
-                    <h2 class="section-title">The Developer Behind The Screen</h2>
+                    <h2 class="section-title">The Developer Behind The Code</h2>
                     <div class="section-line"></div>
                 </div>
                 <div class="about-grid">
-                    <div class="about-content glass">
-                        <div class="about-text">
-                            <p>I am a dedicated web developer with a keen eye for aesthetics and a passion for coding.
-                                My journey started with a fascination for how things work on the internet, which led me
-                                to dive deep into HTML, CSS, and JavaScript.</p>
-                            <p>Over the years, I've honed my skills in modern frameworks line React, focusing on
-                                building applications that are not just functional, but also provide an exceptional user
-                                experience.</p>
+                    <div class="about-text-col">
+                        <div class="about-content glass">
+                            <p>
+                                I am <strong>Gandhi Rajan S</strong>, a dedicated
+                                <strong>B.Tech Information Technology</strong> student with a deep passion for building
+                                impactful digital solutions. My journey in tech started with curiosity about how
+                                the internet works, which evolved into a strong command of modern web technologies.
+                            </p>
+                            <p>
+                                I specialize in <strong>Full Stack Development</strong> — from crafting responsive,
+                                interactive front-end interfaces with <strong>React</strong> and modern CSS, to building
+                                robust back-end APIs with <strong>Node.js</strong> and <strong>Express</strong>.
+                                I also have strong foundations in <strong>Java</strong>,
+                                <strong>Python</strong>, and <strong>C</strong> programming.
+                            </p>
+                            <p>
+                                Beyond coding, I'm an active competitive programmer, hackathon participant, and
+                                continuous learner. I believe in writing clean, maintainable code and creating
+                                applications that solve real-world problems.
+                            </p>
                         </div>
-                        <div class="about-stats">
-                            <div class="stat-item">
-                                <span class="stat-num">3+</span>
-                                <span class="stat-label">Years Exp.</span>
+                    </div>
+                    <div class="about-cards-col">
+                        <div class="highlight-card glass">
+                            <div class="highlight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="highlight-info">
+                                <h4>B.Tech IT Student</h4>
+                                <p>Pursuing degree in Information Technology Engineering</p>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-num">50+</span>
-                                <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="highlight-card glass">
+                            <div class="highlight-icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="highlight-info">
+                                <h4>Full-Stack Developer</h4>
+                                <p>Building modern web apps with React, Node.js & more</p>
                             </div>
-                            <div class="stat-item">
-                                <span class="stat-num">100%</span>
-                                <span class="stat-label">Dedication</span>
+                        </div>
+                        <div class="highlight-card glass">
+                            <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
+                            <div class="highlight-info">
+                                <h4>AI/ML Enthusiast</h4>
+                                <p>Exploring machine learning and intelligent systems</p>
+                            </div>
+                        </div>
+                        <div class="highlight-card glass">
+                            <div class="highlight-icon"><i class="fa-solid fa-rocket"></i></div>
+                            <div class="highlight-info">
+                                <h4>Problem Solver</h4>
+                                <p>200+ DSA problems solved across coding platforms</p>
                             </div>
                         </div>
                     </div>
@@ -139,93 +201,364 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section alternate">
+        <!-- ============ EDUCATION SECTION ============ -->
+        <section id="education">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-tag">Education</span>
+                    <h2 class="section-title">Academic Journey</h2>
+                    <div class="section-line"></div>
+                    <p class="section-subtitle">My academic path that shaped my technical foundation and
+                        problem-solving skills.</p>
+                </div>
+                <div class="timeline">
+                    <!-- Education: B.Tech -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass">
+                            <span class="timeline-date">2022 — 2026</span>
+                            <h3>Bachelor of Technology (B.Tech) — Information Technology</h3>
+                            <p class="institution"><i class="fa-solid fa-building-columns"></i> [Your College Name], Tamil Nadu</p>
+                            <p>Specializing in Full Stack Development, Data Structures & Algorithms, and Database Management Systems. <span class="status-badge">Currently Pursuing</span></p>
+                            <span class="grade"><i class="fa-solid fa-award"></i> CGPA: [Add CGPA] / 10</span>
+                        </div>
+                    </div>
+                    <!-- Education: 12th -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass">
+                            <span class="timeline-date">2020 — 2022</span>
+                            <h3>Higher Secondary (12th Grade) — Computer Science</h3>
+                            <p class="institution"><i class="fa-solid fa-school"></i> [Your School Name], Tamil Nadu</p>
+                            <p>Computer Science Stream — Developed foundational skills in programming and logical thinking.</p>
+                            <span class="grade"><i class="fa-solid fa-award"></i> [Add Percentage]% — State Board</span>
+                        </div>
+                    </div>
+                    <!-- Education: 10th -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card glass">
+                            <span class="timeline-date">2019 — 2020</span>
+                            <h3>Secondary School (10th Grade)</h3>
+                            <p class="institution"><i class="fa-solid fa-school"></i> [Your School Name], Tamil Nadu</p>
+                            <p>Strong academic foundation with emphasis on Mathematics and Science.</p>
+                            <span class="grade"><i class="fa-solid fa-award"></i> [Add Percentage]% — State Board</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SKILLS SECTION ============ -->
+        <section id="skills" class="section-alt">
             <div class="container">
                 <div class="section-header centered">
                     <span class="section-tag">My Expertise</span>
                     <h2 class="section-title">Tech Stack & Skills</h2>
                     <div class="section-line"></div>
+                    <p class="section-subtitle">Technologies I work with to bring ideas to life.</p>
                 </div>
-                <div class="skills-grid">
-                    <!-- HTML5 -->
-                    <div class="skill-card glass" data-skill="HTML5">
-                        <i class="fa-brands fa-html5 color-html"></i>
-                        <h3>HTML5</h3>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 95%;"></div>
+                <div class="skills-categories">
+                    <!-- Programming Languages -->
+                    <div class="skill-category glass">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="skill-tag"><i class="fa-solid fa-c"></i> C</span>
+                            <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
                         </div>
                     </div>
-                    <!-- CSS3 -->
-                    <div class="skill-card glass" data-skill="CSS3">
-                        <i class="fa-brands fa-css3-alt color-css"></i>
-                        <h3>CSS3</h3>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%;"></div>
+                    <!-- Frontend -->
+                    <div class="skill-category glass">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="skill-tag"><i class="fa-brands fa-react"></i> React</span>
+                            <span class="skill-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                            <span class="skill-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Tailwind CSS</span>
                         </div>
                     </div>
-                    <!-- JS -->
-                    <div class="skill-card glass" data-skill="JavaScript">
-                        <i class="fa-brands fa-js color-js"></i>
-                        <h3>JavaScript</h3>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%;"></div>
+                    <!-- Backend -->
+                    <div class="skill-category glass">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                            <h3>Backend & Database</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                            <span class="skill-tag"><i class="fa-solid fa-bolt"></i> Express.js</span>
+                            <span class="skill-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+                            <span class="skill-tag"><i class="fa-solid fa-database"></i> SQLite</span>
+                            <span class="skill-tag"><i class="fa-solid fa-plug"></i> REST APIs</span>
                         </div>
                     </div>
-                    <!-- React -->
-                    <div class="skill-card glass" data-skill="React">
-                        <i class="fa-brands fa-react color-react"></i>
-                        <h3>React</h3>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
+                    <!-- AI/ML -->
+                    <div class="skill-category glass">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h3>AI / Machine Learning</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+                            <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> Deep Learning</span>
+                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                        </div>
+                    </div>
+                    <!-- Tools -->
+                    <div class="skill-category glass">
+                        <div class="skill-category-header">
+                            <div class="skill-category-icon">
+                                <i class="fa-solid fa-toolbox"></i>
+                            </div>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="skills-list">
+                            <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+                            <span class="skill-tag"><i class="fa-brands fa-github"></i> GitHub</span>
+                            <span class="skill-tag"><i class="fa-solid fa-terminal"></i> VS Code</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
+        <!-- ============ PROJECTS SECTION ============ -->
+        <section id="projects">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header centered">
                     <span class="section-tag">Portfolio</span>
                     <h2 class="section-title">Featured Projects</h2>
                     <div class="section-line"></div>
+                    <p class="section-subtitle">A selection of projects that showcase my skills and passion for
+                        development.</p>
                 </div>
                 <div class="projects-grid">
                     <!-- Project 1 -->
-                    <div class="project-card glass">
+                    <div class="project-card glass" data-project="0">
                         <div class="project-img">
-                            <img src="assets/project1.png" alt="Project 1">
+                            <img src="assets/project1.png" alt="Personal Portfolio Website">
                             <div class="project-overlay">
-                                <a href="#" class="view-btn"><i class="fa-solid fa-link"></i></a>
+                                <button class="overlay-btn project-details-btn" title="View Details"><i
+                                        class="fa-solid fa-eye"></i></button>
+                                <a href="#" class="overlay-btn" title="Source Code (Add Link)"><i
+                                        class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Modern E-Commerce</h3>
-                            <p>A full-featured shopping experience with React.</p>
+                            <h3>Personal Portfolio Website</h3>
+                            <p>Modern, responsive developer portfolio with dark glassmorphism design, particle
+                                animations, and interactive UI.</p>
                             <div class="project-tags">
-                                <span>React</span>
+                                <span>HTML5</span>
                                 <span>CSS3</span>
-                                <span>Node.js</span>
+                                <span>JavaScript</span>
                             </div>
                         </div>
                     </div>
                     <!-- Project 2 -->
-                    <div class="project-card glass">
+                    <div class="project-card glass" data-project="1">
                         <div class="project-img">
-                            <img src="assets/project2.png" alt="Project 2">
+                            <img src="assets/project2.png" alt="Inventory Management System">
                             <div class="project-overlay">
-                                <a href="#" class="view-btn"><i class="fa-solid fa-link"></i></a>
+                                <button class="overlay-btn project-details-btn" title="View Details"><i
+                                        class="fa-solid fa-eye"></i></button>
+                                <a href="#" class="overlay-btn" title="Source Code (Add Link)"><i
+                                        class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>Creative Dashboard</h3>
-                            <p>Data visualization with elegant UI/UX design.</p>
+                            <h3>Inventory Management System</h3>
+                            <p>A full-featured inventory tracking system with CRUD operations, stock alerts, and
+                                reporting features.</p>
                             <div class="project-tags">
-                                <span>JS</span>
-                                <span>D3.js</span>
-                                <span>SCSS</span>
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card glass" data-project="2">
+                        <div class="project-img">
+                            <img src="assets/project3.png" alt="AI/ML Project">
+                            <div class="project-overlay">
+                                <button class="overlay-btn project-details-btn" title="View Details"><i
+                                        class="fa-solid fa-eye"></i></button>
+                                <a href="#" class="overlay-btn" title="Source Code (Add Link)"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>AI/ML Exploration Project</h3>
+                            <p>Machine learning model for data classification and prediction using Python and
+                                popular ML libraries.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>ML</span>
+                                <span>Pandas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card glass" data-project="3">
+                        <div class="project-img">
+                            <img src="assets/project4.png" alt="Micro-Blogging Application">
+                            <div class="project-overlay">
+                                <button class="overlay-btn project-details-btn" title="View Details"><i
+                                        class="fa-solid fa-eye"></i></button>
+                                <a href="#" class="overlay-btn" title="Source Code (Add Link)"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Micro-Blogging Application</h3>
+                            <p>A lightweight social platform for short-form content with user authentication, posts,
+                                and real-time feed updates.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Firebase</span>
+                                <span>Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-cta">
+                    <a href="https://github.com/" target="_blank" class="btn btn-outline">
+                        <i class="fa-brands fa-github"></i> View All on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Details Modal -->
+        <div id="project-modal" class="modal-overlay">
+            <div class="modal-content glass">
+                <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <h2 id="modal-title">Project Title</h2>
+                        <div class="project-tags" id="modal-tags"></div>
+                    </div>
+                    <p id="modal-description">Description</p>
+                    <div class="modal-features">
+                        <h3>Features</h3>
+                        <ul id="modal-features-list"></ul>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="#" class="btn btn-primary btn-sm" id="modal-github" target="_blank">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="btn btn-outline btn-sm" id="modal-demo" target="_blank">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ CERTIFICATIONS & ACHIEVEMENTS ============ -->
+        <section id="certifications" class="section-alt">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="certs-grid">
+                    <!-- Certifications Column -->
+                    <div class="certs-column">
+                        <h3><i class="fa-solid fa-certificate"></i> Certifications</h3>
+                        <div class="cert-item glass">
+                            <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                            <div class="cert-info">
+                                <h4>Full Stack Web Development</h4>
+                                <p>Comprehensive course covering MERN stack, REST APIs, and deployment.</p>
+                                <span class="cert-source">[Add Issuer] — [Add Date]</span>
+                            </div>
+                        </div>
+                        <div class="cert-item glass">
+                            <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+                            <div class="cert-info">
+                                <h4>Python for Data Science</h4>
+                                <p>Data analysis, visualization, and machine learning fundamentals with Python.</p>
+                                <span class="cert-source">[Add Issuer] — [Add Date]</span>
+                            </div>
+                        </div>
+                        <div class="cert-item glass">
+                            <div class="cert-icon"><i class="fa-brands fa-java"></i></div>
+                            <div class="cert-info">
+                                <h4>Java Programming & OOP</h4>
+                                <p>Advanced Java concepts, design patterns, and object-oriented programming.</p>
+                                <span class="cert-source">[Add Issuer] — [Add Date]</span>
+                            </div>
+                        </div>
+                        <div class="cert-item glass">
+                            <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+                            <div class="cert-info">
+                                <h4>Database Management Systems</h4>
+                                <p>SQL, NoSQL, database design, normalization, and query optimization.</p>
+                                <span class="cert-source">[Add Issuer] — [Add Date]</span>
+                            </div>
+                        </div>
+                        <div class="cert-item glass placeholder-item">
+                            <div class="cert-icon"><i class="fa-solid fa-plus"></i></div>
+                            <div class="cert-info">
+                                <h4>Add Your Certifications</h4>
+                                <p>Replace these placeholders with your actual certifications.</p>
+                                <span class="cert-source">Update in index.html</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Achievements Column -->
+                    <div class="certs-column">
+                        <h3><i class="fa-solid fa-trophy"></i> Achievements</h3>
+                        <div class="cert-item glass">
+                            <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
+                            <div class="cert-info">
+                                <h4>Hackathon Participant</h4>
+                                <p>Participated in national-level hackathons building innovative solutions under time constraints.</p>
+                                <span class="cert-source">[Add Details]</span>
+                            </div>
+                        </div>
+                        <div class="cert-item glass">
+                            <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="cert-info">
+                                <h4>DSA Problem Solving</h4>
+                                <p>Active problem-solving across LeetCode, HackerRank, and CodeChef platforms.</p>
+                                <span class="cert-source">Competitive Programming</span>
+                            </div>
+                        </div>
+                        <div class="cert-item glass">
+                            <div class="cert-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="cert-info">
+                                <h4>Tech Event Organizer</h4>
+                                <p>Organized workshops, coding contests, and technical events for students.</p>
+                                <span class="cert-source">College Activity</span>
+                            </div>
+                        </div>
+                        <div class="cert-item glass placeholder-item">
+                            <div class="cert-icon"><i class="fa-solid fa-plus"></i></div>
+                            <div class="cert-info">
+                                <h4>Add Your Achievements</h4>
+                                <p>Replace these placeholders with your actual achievements.</p>
+                                <span class="cert-source">Update in index.html</span>
                             </div>
                         </div>
                     </div>
@@ -233,17 +566,119 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section alternate">
+        <!-- ============ CURRENTLY BUILDING ============ -->
+        <section id="building">
             <div class="container">
+                <div class="section-header centered">
+                    <span class="section-tag">In Development</span>
+                    <h2 class="section-title">Currently Building</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="building-wrapper glass">
+                    <div class="building-visual">
+                        <div class="ai-orb"></div>
+                        <div class="ai-ring"></div>
+                        <div class="ai-ring ai-ring-2"></div>
+                        <div class="ai-ring ai-ring-3"></div>
+                        <div class="ai-pulse"></div>
+                    </div>
+                    <div class="building-info">
+                        <span class="building-status">🚧 Work in Progress</span>
+                        <h3>Personal AI Assistant</h3>
+                        <p>
+                            An intelligent personal AI assistant inspired by futuristic virtual assistants,
+                            designed to explore voice interaction, task automation, natural language processing,
+                            and smart productivity features.
+                        </p>
+                        <div class="building-tech">
+                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="skill-tag"><i class="fa-solid fa-brain"></i> NLP</span>
+                            <span class="skill-tag"><i class="fa-solid fa-microchip"></i> ML</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CODING PROFILES ============ -->
+        <section id="profiles">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-tag">Profiles</span>
+                    <h2 class="section-title">Coding & Professional Profiles</h2>
+                    <div class="section-line"></div>
+                    <p class="section-subtitle">My presence across development and competitive programming platforms.</p>
+                </div>
+                <div class="profiles-grid">
+                    <!-- GitHub -->
+                    <div class="profile-card glass">
+                        <div class="profile-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Open-source contributions, personal projects, and code repositories.</p>
+                        <a href="https://github.com/" target="_blank" class="profile-link">
+                            View Profile <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- LinkedIn -->
+                    <div class="profile-card glass">
+                        <div class="profile-icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Professional network, education, and career connections.</p>
+                        <a href="https://linkedin.com/" target="_blank" class="profile-link">
+                            View Profile <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- LeetCode -->
+                    <div class="profile-card glass">
+                        <div class="profile-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>LeetCode</h3>
+                        <p>Problem-solving across Easy, Medium & Hard challenges.</p>
+                        <a href="https://leetcode.com/" target="_blank" class="profile-link">
+                            View Profile <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- HackerRank -->
+                    <div class="profile-card glass">
+                        <div class="profile-icon">
+                            <i class="fa-brands fa-hackerrank"></i>
+                        </div>
+                        <h3>HackerRank</h3>
+                        <p>Badges in Java, Python, and Problem Solving.</p>
+                        <a href="https://hackerrank.com/" target="_blank" class="profile-link">
+                            View Profile <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT SECTION ============ -->
+        <section id="contact" class="section-alt">
+            <div class="container">
+                <div class="section-header centered">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Build Something Together</h2>
+                    <div class="section-line"></div>
+                </div>
                 <div class="contact-wrapper glass">
                     <div class="contact-info">
-                        <h2 class="section-title">Let's Work Together</h2>
-                        <p>Have a project in mind? Reach out and let's build something amazing together.</p>
+                        <h2 class="section-title">Reach Out</h2>
+                        <p>Have a project in mind or want to discuss an opportunity? I'd love to hear from you. Fill
+                            out the form or reach me through the details below.</p>
                         <div class="contact-details">
                             <div class="detail-item">
                                 <i class="fa-solid fa-envelope"></i>
                                 <span>gandhirajan@example.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+91 98765 43210</span>
                             </div>
                             <div class="detail-item">
                                 <i class="fa-solid fa-location-dot"></i>
@@ -251,37 +686,67 @@
                             </div>
                         </div>
                         <div class="social-links">
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
-                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="mailto:gandhirajan@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                         </div>
                     </div>
-                    <form class="contact-form" id="contact-form">
+                    <form class="contact-form" id="contact-form" action="mailto:gandhirajan@example.com" method="post" enctype="text/plain">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Collaboration / Opportunity" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message <i
-                                class="fa-solid fa-paper-plane"></i></button>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div class="form-status" id="form-status"></div>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- ============ FOOTER ============ -->
     <footer id="footer">
         <div class="container">
-            <p>&copy; 2026 Gandhi Rajan. Designed with <i class="fa-solid fa-heart"></i> & Code.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">G<span>.</span>Rajan</a>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:gandhirajan@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gandhi Rajan S. Built with passion and code. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Custom JS -->
-    <script src="js/app.js"></script>
+    <script src="js/app.js?v=2"></script>
 </body>
 
 </html>
