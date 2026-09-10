@@ -1,0 +1,22 @@
+# Node dependencies
+node_modules/
+backend/node_modules/
+package-lock.json
+backend/package-lock.json
+
+# Environment variables & secrets
+.env
+backend/.env
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
