@@ -23,10 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================
     const typingElement = document.getElementById('typing-effect');
     const words = [
-        'Web Applications',
-        'Full-Stack Solutions',
-        'AI & ML Projects',
-        'Smart Digital Solutions'
+        'modern web experiences.',
+        'responsive websites.',
+        'Full-Stack web applications.',
+        'scalable backend systems.',
+        'modern database solutions.'
     ];
     let wordIndex = 0;
     let charIndex = 0;
@@ -220,10 +221,10 @@ document.addEventListener('DOMContentLoaded', () => {
             demo: '#'
         },
         {
-            title: 'AI/ML Exploration Project',
-            description: 'A machine learning project exploring data classification and prediction using Python. Implements various algorithms for real-world dataset analysis.',
-            tags: ['Python', 'ML', 'Pandas'],
-            features: ['Data preprocessing and feature engineering', 'Multiple ML model implementations', 'Model evaluation and comparison', 'Visualization of results and insights'],
+            title: 'Real-Time Task Management Dashboard',
+            description: 'A full-stack collaborative task management platform with real-time updates, kanban drag-and-drop boards, JWT user authentication, and interactive analytics dashboard.',
+            tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+            features: ['Real-time WebSocket task status updates', 'Kanban drag-and-drop workflow boards', 'JWT based user authentication & roles', 'MongoDB schema optimization & queries'],
             github: 'https://github.com/',
             demo: '#'
         },
@@ -323,9 +324,10 @@ document.addEventListener('DOMContentLoaded', () => {
             reset() {
                 this.x = Math.random() * canvasWidth;
                 this.y = Math.random() * canvasHeight;
-                this.size = Math.random() * 2 + 0.8;
+                this.size = Math.random() * 2.2 + 0.8;
                 this.speedX = (Math.random() - 0.5) * 0.5;
                 this.speedY = (Math.random() - 0.5) * 0.5;
+                this.colorType = Math.floor(Math.random() * 3); // 0: cyan, 1: purple, 2: magenta
             }
             update() {
                 this.x += this.speedX;
@@ -346,7 +348,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             draw() {
-                ctx.fillStyle = `rgba(0, 242, 254, 0.3)`;
+                let color = 'rgba(0, 242, 254, 0.4)';
+                if (this.colorType === 1) color = 'rgba(124, 58, 237, 0.4)';
+                if (this.colorType === 2) color = 'rgba(255, 0, 122, 0.3)';
+
+                ctx.fillStyle = color;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -375,8 +381,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dy = particles[i].y - particles[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
                     if (dist < 110) {
-                        const alpha = 0.08 * (1 - dist / 110);
-                        ctx.strokeStyle = `rgba(0, 242, 254, ${alpha})`;
+                        const alpha = 0.09 * (1 - dist / 110);
+                        const strokeColor = particles[i].colorType === 1 ? `rgba(124, 58, 237, ${alpha})` : `rgba(0, 242, 254, ${alpha})`;
+                        ctx.strokeStyle = strokeColor;
                         ctx.lineWidth = 0.6;
                         ctx.beginPath();
                         ctx.moveTo(particles[i].x, particles[i].y);
@@ -465,13 +472,13 @@ document.addEventListener('DOMContentLoaded', () => {
     statNums.forEach(num => counterObserver.observe(num));
 
     // ========================================
-    // 13. FORM SUBMISSION — Mailto Fallback
+    // 13. FORM SUBMISSION — API & Mailto Fallback
     // ========================================
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = contactForm.querySelector('button[type="submit"]');
             const originalHTML = btn.innerHTML;
@@ -483,7 +490,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!name || !email || !subject || !message) {
                 if (formStatus) {
-                    formStatus.textContent = '✗ Please fill in all fields.';
+                    formStatus.textContent = '✗ Please fill in all required fields.';
                     formStatus.className = 'form-status error';
                     setTimeout(() => { formStatus.className = 'form-status'; }, 4000);
                 }
@@ -493,43 +500,47 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
             btn.disabled = true;
 
-            const mailtoLink = `mailto:gandhirajan@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-            )}`;
-
             try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, subject, message })
+                });
+
+                if (response.ok) {
+                    btn.innerHTML = 'Message Sent! <i class="fa-solid fa-check"></i>';
+                    btn.style.background = 'var(--success)';
+                    contactForm.reset();
+
+                    if (formStatus) {
+                        formStatus.textContent = '✓ Thank you! Your message has been saved successfully.';
+                        formStatus.className = 'form-status success';
+                    }
+                } else {
+                    throw new Error('API request failed');
+                }
+            } catch (error) {
+                console.log('Backend API unreachable, using mailto fallback:', error);
+                const mailtoLink = `mailto:gandhirajan.dev@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+                )}`;
                 window.location.href = mailtoLink;
-                btn.innerHTML = 'Message Sent! <i class="fa-solid fa-check"></i>';
-                btn.style.background = 'var(--success)';
+
+                btn.innerHTML = 'Mail Client Opened <i class="fa-solid fa-envelope"></i>';
+                btn.style.background = 'var(--primary)';
                 contactForm.reset();
 
                 if (formStatus) {
-                    formStatus.textContent = '✓ Your email client has been opened.';
+                    formStatus.textContent = '✓ Opened your default mail client to deliver your message.';
                     formStatus.className = 'form-status success';
                 }
-
+            } finally {
                 setTimeout(() => {
                     btn.innerHTML = originalHTML;
                     btn.style.background = '';
                     btn.disabled = false;
                     if (formStatus) formStatus.className = 'form-status';
-                }, 4000);
-            } catch (error) {
-                console.error('Form submission error:', error);
-                btn.innerHTML = 'Error — Try Again <i class="fa-solid fa-xmark"></i>';
-                btn.style.background = '#d32f2f';
-
-                if (formStatus) {
-                    formStatus.textContent = '✗ Something went wrong. Please try again.';
-                    formStatus.className = 'form-status error';
-                }
-
-                setTimeout(() => {
-                    btn.innerHTML = originalHTML;
-                    btn.style.background = '';
-                    btn.disabled = false;
-                    if (formStatus) formStatus.className = 'form-status';
-                }, 4000);
+                }, 5000);
             }
         });
     }

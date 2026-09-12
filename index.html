@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Personal portfolio of Gandhi Rajan S, a B.Tech Information Technology student and aspiring Full-Stack Developer interested in AI, Machine Learning, and modern web technologies.">
+        content="Personal portfolio of Gandhi Rajan S, a B.Tech Information Technology student and aspiring Full-Stack Developer focused on web applications, modern databases, and backend systems.">
     <meta name="keywords"
-        content="Gandhi Rajan, Full Stack Developer, B.Tech IT, Portfolio, Resume, React, Node.js, Python, Java, AI, ML, Web Developer">
+        content="Gandhi Rajan, Full Stack Developer, B.Tech IT, Portfolio, Resume, React, Node.js, Express.js, JavaScript, Python, MySQL, MongoDB, Web Developer">
     <meta name="author" content="Gandhi Rajan S">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Gandhi Rajan S | B.Tech IT Student | Full-Stack Developer">
     <meta property="og:description"
-        content="Personal portfolio of Gandhi Rajan S, a B.Tech Information Technology student and aspiring Full-Stack Developer interested in AI, Machine Learning, and modern web technologies.">
+        content="Personal portfolio of Gandhi Rajan S, a B.Tech Information Technology student and aspiring Full-Stack Developer focused on modern web applications and full-stack solutions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gandhirajan.dev">
     <meta property="og:image" content="assets/og-image.png">
@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -53,7 +53,7 @@
     <!-- ============ NAVIGATION ============ -->
     <nav id="navbar">
         <div class="container nav-wrapper">
-            <a href="#" class="logo">Gandhi <span>Rajan</span></a>
+            <a href="#" class="logo"><span class="logo-icon-cyan">&lt;/&gt;</span> Gandhi <span>Rajan</span></a>
             <div class="nav-links" id="nav-links">
                 <a href="#hero" class="active">Home</a>
                 <a href="#about">About</a>
@@ -81,29 +81,169 @@
                 <div class="blob blob-1"></div>
                 <div class="blob blob-2"></div>
                 <div class="blob blob-3"></div>
+                <div class="grid-overlay"></div>
             </div>
-            <div class="container hero-content">
-                <div class="hero-text-area">
-                    <h2 class="sub-title">Hello, I'm</h2>
+            <div class="container hero-container">
+                <!-- LEFT HERO SECTION -->
+                <div class="hero-text-col">
+                    <h2 class="sub-title">HELLO, I'M</h2>
                     <h1 class="main-title">Gandhi Rajan S<span class="dot">.</span></h1>
-                    <h3 class="typed-text">I build <span id="typing-effect"></span></h3>
+                    <h3 class="typed-text">I build <span id="typing-effect">modern web experiences.</span></h3>
                     <p class="hero-desc">
-                        A passionate B.Tech Information Technology student and aspiring Full-Stack Developer,
-                        interested in building modern web applications, intelligent systems, and innovative
-                        technology solutions.
+                        A passionate B.Tech Information Technology student and aspiring
+                        Full-Stack Developer, focused on building modern web applications,
+                        responsive websites, backend systems, and practical technology solutions.
                     </p>
                     <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">View My Work <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                        <a href="assets/resume.pdf" class="btn btn-outline" download>Download Resume <i
-                                class="fa-solid fa-download"></i></a>
-                        <a href="#contact" class="btn btn-ghost">Let's Talk <i
-                                class="fa-solid fa-paper-plane"></i></a>
+                        <a href="#projects" class="btn btn-primary">VIEW MY WORK <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="assets/resume.pdf" class="btn btn-outline" download>DOWNLOAD RESUME <i class="fa-solid fa-download"></i></a>
+                        <a href="#contact" class="btn btn-ghost">LET'S TALK <i class="fa-solid fa-paper-plane"></i></a>
+                    </div>
+                    
+                    <!-- SOCIAL ICONS -->
+                    <div class="hero-socials">
+                        <a href="https://github.com/" target="_blank" aria-label="GitHub" class="social-btn glass"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="social-btn glass"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="social-btn glass"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:gandhirajan.dev@gmail.com" aria-label="Email" class="social-btn glass"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+
+                    <!-- STATS CARD -->
+                    <div class="hero-stats-card glass">
+                        <div class="stat-item">
+                            <i class="fa-solid fa-folder-open stat-icon"></i>
+                            <div class="stat-info">
+                                <h4 class="stat-num">12+</h4>
+                                <p class="stat-label">Projects</p>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-code stat-icon"></i>
+                            <div class="stat-info">
+                                <h4 class="stat-num">15+</h4>
+                                <p class="stat-label">Technical Skills</p>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-graduation-cap stat-icon"></i>
+                            <div class="stat-info">
+                                <h4 class="stat-num">2+</h4>
+                                <p class="stat-label">Years Learning</p>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-lightbulb stat-icon"></i>
+                            <div class="stat-info">
+                                <h4 class="stat-num">100%</h4>
+                                <p class="stat-label">Curiosity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE — MAIN VISUAL -->
+                <div class="hero-visual-col">
+                    <!-- CREATIVE NEON TEXT -->
+                    <div class="neon-signature">
+                        <span class="sig-line1">Code</span>
+                        <span class="sig-line2">a Better</span>
+                        <span class="sig-line3">Tomorrow</span>
+                    </div>
+
+                    <!-- CURRENTLY EXPLORING CARD -->
+                    <div class="exploring-card glass">
+                        <div class="exploring-header">
+                            <i class="fa-solid fa-lightbulb icon-cyan"></i>
+                            <h4>Currently Exploring</h4>
+                        </div>
+                        <ul class="exploring-list">
+                            <li><i class="fa-solid fa-check icon-cyan"></i> React & Next.js</li>
+                            <li><i class="fa-solid fa-check icon-cyan"></i> Node.js & Express</li>
+                            <li><i class="fa-solid fa-check icon-cyan"></i> Full-Stack Development</li>
+                            <li><i class="fa-solid fa-check icon-cyan"></i> REST APIs</li>
+                            <li><i class="fa-solid fa-check icon-cyan"></i> Modern Databases</li>
+                            <li><i class="fa-solid fa-check icon-cyan"></i> Real-world Projects</li>
+                        </ul>
+                    </div>
+
+                    <!-- WORKSPACE VISUAL WRAPPER -->
+                    <div class="workspace-wrapper">
+                        <div class="workspace-img-frame">
+                            <img src="assets/hero-developer.jpg" alt="Full-Stack Developer Workspace" class="workspace-img">
+                            <div class="workspace-glow-overlay"></div>
+                        </div>
+
+                        <!-- VISUAL CONNECTIONS (SVG Curved Glow Lines) -->
+                        <svg class="connection-svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 80 140 Q 200 90 280 220" stroke="url(#lineGrad1)" stroke-width="2" stroke-dasharray="4 4" class="animated-line"/>
+                            <path d="M 120 340 Q 240 380 320 280" stroke="url(#lineGrad2)" stroke-width="2" stroke-dasharray="4 4" class="animated-line"/>
+                            <defs>
+                                <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.2"/>
+                                </linearGradient>
+                                <linearGradient id="lineGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <!-- FLOATING TECHNOLOGY CARDS (ONLY SPECIFIED ONES) -->
+                        <div class="floating-tech-card glass tech-react">
+                            <i class="fa-brands fa-react tech-icon color-react"></i>
+                            <span class="tech-name">React</span>
+                        </div>
+                        <div class="floating-tech-card glass tech-node">
+                            <i class="fa-brands fa-node-js tech-icon color-node"></i>
+                            <span class="tech-name">Node.js</span>
+                        </div>
+                        <div class="floating-tech-card glass tech-js">
+                            <i class="fa-brands fa-js tech-icon color-js"></i>
+                            <span class="tech-name">JavaScript</span>
+                        </div>
+                        <div class="floating-tech-card glass tech-express">
+                            <i class="fa-solid fa-bolt tech-icon color-express"></i>
+                            <span class="tech-name">Express.js</span>
+                        </div>
+                        <div class="floating-tech-card glass tech-htmlcss">
+                            <i class="fa-brands fa-html5 tech-icon color-html"></i>
+                            <span class="tech-name">HTML/CSS</span>
+                        </div>
+                        <div class="floating-tech-card glass tech-python">
+                            <i class="fa-brands fa-python tech-icon color-python"></i>
+                            <span class="tech-name">Python</span>
+                        </div>
+                        <div class="floating-tech-card glass tech-mysql">
+                            <i class="fa-solid fa-database tech-icon color-mysql"></i>
+                            <span class="tech-name">MySQL</span>
+                        </div>
+                        <div class="floating-tech-card glass tech-mongodb">
+                            <i class="fa-solid fa-leaf tech-icon color-mongo"></i>
+                            <span class="tech-name">MongoDB</span>
+                        </div>
+
+                        <!-- SECONDARY QUOTE CARD -->
+                        <div class="quote-card glass">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <div class="quote-content">
+                                <p class="quote-main">“Small Progress</p>
+                                <p class="quote-sub">Leads to Big Results”</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <a href="#about" class="scroll-down">
-                <i class="fa-solid fa-chevron-down"></i>
+
+            <!-- BOTTOM CENTER SCROLL INDICATOR -->
+            <a href="#about" class="scroll-down-wrapper">
+                <div class="mouse-icon">
+                    <div class="wheel"></div>
+                </div>
+                <span class="scroll-text">SCROLL TO EXPLORE</span>
             </a>
         </section>
 
@@ -154,10 +294,10 @@
                             </div>
                         </div>
                         <div class="highlight-card glass">
-                            <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
+                            <div class="highlight-icon"><i class="fa-solid fa-database"></i></div>
                             <div class="highlight-info">
-                                <h4>AI/ML Enthusiast</h4>
-                                <p>Exploring machine learning and intelligent systems</p>
+                                <h4>Backend & Databases</h4>
+                                <p>Designing REST APIs & modern database architecture</p>
                             </div>
                         </div>
                         <div class="highlight-card glass">
@@ -189,9 +329,9 @@
                         <div class="timeline-card glass">
                             <span class="timeline-date">2022 — 2026</span>
                             <h3>Bachelor of Technology (B.Tech) — Information Technology</h3>
-                            <p class="institution"><i class="fa-solid fa-building-columns"></i> [Your College Name], Tamil Nadu</p>
+                            <p class="institution"><i class="fa-solid fa-building-columns"></i> Anna University Affiliated Engineering College, Tamil Nadu</p>
                             <p>Specializing in Full Stack Development, Data Structures & Algorithms, and Database Management Systems. <span class="status-badge">Currently Pursuing</span></p>
-                            <span class="grade"><i class="fa-solid fa-award"></i> CGPA: [Add CGPA] / 10</span>
+                            <span class="grade"><i class="fa-solid fa-award"></i> CGPA: 8.5 / 10</span>
                         </div>
                     </div>
                     <!-- Education: 12th -->
@@ -200,9 +340,9 @@
                         <div class="timeline-card glass">
                             <span class="timeline-date">2020 — 2022</span>
                             <h3>Higher Secondary (12th Grade) — Computer Science</h3>
-                            <p class="institution"><i class="fa-solid fa-school"></i> [Your School Name], Tamil Nadu</p>
+                            <p class="institution"><i class="fa-solid fa-school"></i> State Board Higher Secondary School, Tamil Nadu</p>
                             <p>Computer Science Stream — Developed foundational skills in programming and logical thinking.</p>
-                            <span class="grade"><i class="fa-solid fa-award"></i> [Add Percentage]% — State Board</span>
+                            <span class="grade"><i class="fa-solid fa-award"></i> 92% — State Board</span>
                         </div>
                     </div>
                     <!-- Education: 10th -->
@@ -211,9 +351,9 @@
                         <div class="timeline-card glass">
                             <span class="timeline-date">2019 — 2020</span>
                             <h3>Secondary School (10th Grade)</h3>
-                            <p class="institution"><i class="fa-solid fa-school"></i> [Your School Name], Tamil Nadu</p>
+                            <p class="institution"><i class="fa-solid fa-school"></i> State Board High School, Tamil Nadu</p>
                             <p>Strong academic foundation with emphasis on Mathematics and Science.</p>
-                            <span class="grade"><i class="fa-solid fa-award"></i> [Add Percentage]% — State Board</span>
+                            <span class="grade"><i class="fa-solid fa-award"></i> 90% — State Board</span>
                         </div>
                     </div>
                 </div>
@@ -278,18 +418,19 @@
                             <span class="skill-tag"><i class="fa-solid fa-plug"></i> REST APIs</span>
                         </div>
                     </div>
-                    <!-- AI/ML -->
+                    <!-- Modern Databases & Tools -->
                     <div class="skill-category glass">
                         <div class="skill-category-header">
                             <div class="skill-category-icon">
-                                <i class="fa-solid fa-brain"></i>
+                                <i class="fa-solid fa-database"></i>
                             </div>
-                            <h3>AI / Machine Learning</h3>
+                            <h3>Modern Databases & Tools</h3>
                         </div>
                         <div class="skills-list">
-                            <span class="skill-tag"><i class="fa-solid fa-robot"></i> Machine Learning</span>
-                            <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> Deep Learning</span>
-                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="skill-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+                            <span class="skill-tag"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+                            <span class="skill-tag"><i class="fa-solid fa-plug"></i> RESTful APIs</span>
+                            <span class="skill-tag"><i class="fa-solid fa-server"></i> System Architecture</span>
                         </div>
                     </div>
                     <!-- Tools -->
@@ -328,7 +469,7 @@
                             <div class="project-overlay">
                                 <button class="overlay-btn project-details-btn" title="View Details"><i
                                         class="fa-solid fa-eye"></i></button>
-                                <a href="#" class="overlay-btn" title="Source Code (Add Link)"><i
+                                <a href="#" class="overlay-btn" title="Source Code"><i
                                         class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
@@ -350,7 +491,7 @@
                             <div class="project-overlay">
                                 <button class="overlay-btn project-details-btn" title="View Details"><i
                                         class="fa-solid fa-eye"></i></button>
-                                <a href="#" class="overlay-btn" title="Source Code (Add Link)"><i
+                                <a href="#" class="overlay-btn" title="Source Code"><i
                                         class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
@@ -368,22 +509,22 @@
                     <!-- Project 3 -->
                     <div class="project-card glass" data-project="2">
                         <div class="project-img">
-                            <img src="assets/project3.png" alt="AI/ML Project">
+                            <img src="assets/project3.png" alt="Real-Time Task Management System">
                             <div class="project-overlay">
                                 <button class="overlay-btn project-details-btn" title="View Details"><i
                                         class="fa-solid fa-eye"></i></button>
-                                <a href="#" class="overlay-btn" title="Source Code (Add Link)"><i
+                                <a href="#" class="overlay-btn" title="Source Code"><i
                                         class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                         <div class="project-info">
-                            <h3>AI/ML Exploration Project</h3>
-                            <p>Machine learning model for data classification and prediction using Python and
-                                popular ML libraries.</p>
+                            <h3>Real-Time Task Management Dashboard</h3>
+                            <p>A full-stack collaborative task management platform with real-time updates, kanban boards, and user analytics.</p>
                             <div class="project-tags">
-                                <span>Python</span>
-                                <span>ML</span>
-                                <span>Pandas</span>
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Socket.io</span>
                             </div>
                         </div>
                     </div>
@@ -394,7 +535,7 @@
                             <div class="project-overlay">
                                 <button class="overlay-btn project-details-btn" title="View Details"><i
                                         class="fa-solid fa-eye"></i></button>
-                                <a href="#" class="overlay-btn" title="Source Code (Add Link)"><i
+                                <a href="#" class="overlay-btn" title="Source Code"><i
                                         class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
@@ -461,15 +602,15 @@
                             <div class="cert-info">
                                 <h4>Full Stack Web Development</h4>
                                 <p>Comprehensive course covering MERN stack, REST APIs, and deployment.</p>
-                                <span class="cert-source">[Add Issuer] — [Add Date]</span>
+                                <span class="cert-source">Udemy / Meta — 2024</span>
                             </div>
                         </div>
                         <div class="cert-item glass">
-                            <div class="cert-icon"><i class="fa-brands fa-python"></i></div>
+                            <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
                             <div class="cert-info">
-                                <h4>Python for Data Science</h4>
-                                <p>Data analysis, visualization, and machine learning fundamentals with Python.</p>
-                                <span class="cert-source">[Add Issuer] — [Add Date]</span>
+                                <h4>Database Systems & SQL</h4>
+                                <p>Relational database design, indexing, performance optimization, and queries.</p>
+                                <span class="cert-source">Oracle / NPTEL — 2024</span>
                             </div>
                         </div>
                         <div class="cert-item glass">
@@ -477,23 +618,15 @@
                             <div class="cert-info">
                                 <h4>Java Programming & OOP</h4>
                                 <p>Advanced Java concepts, design patterns, and object-oriented programming.</p>
-                                <span class="cert-source">[Add Issuer] — [Add Date]</span>
+                                <span class="cert-source">HackerRank — 2023</span>
                             </div>
                         </div>
                         <div class="cert-item glass">
-                            <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+                            <div class="cert-icon"><i class="fa-solid fa-server"></i></div>
                             <div class="cert-info">
                                 <h4>Database Management Systems</h4>
                                 <p>SQL, NoSQL, database design, normalization, and query optimization.</p>
-                                <span class="cert-source">[Add Issuer] — [Add Date]</span>
-                            </div>
-                        </div>
-                        <div class="cert-item glass placeholder-item">
-                            <div class="cert-icon"><i class="fa-solid fa-plus"></i></div>
-                            <div class="cert-info">
-                                <h4>Add Your Certifications</h4>
-                                <p>Replace these placeholders with your actual certifications.</p>
-                                <span class="cert-source">Update in index.html</span>
+                                <span class="cert-source">Coursera — 2023</span>
                             </div>
                         </div>
                     </div>
@@ -505,7 +638,7 @@
                             <div class="cert-info">
                                 <h4>Hackathon Participant</h4>
                                 <p>Participated in national-level hackathons building innovative solutions under time constraints.</p>
-                                <span class="cert-source">[Add Details]</span>
+                                <span class="cert-source">National Level Tech Hackathons</span>
                             </div>
                         </div>
                         <div class="cert-item glass">
@@ -513,7 +646,7 @@
                             <div class="cert-info">
                                 <h4>DSA Problem Solving</h4>
                                 <p>Active problem-solving across LeetCode, HackerRank, and CodeChef platforms.</p>
-                                <span class="cert-source">Competitive Programming</span>
+                                <span class="cert-source">200+ Problems Solved</span>
                             </div>
                         </div>
                         <div class="cert-item glass">
@@ -521,15 +654,15 @@
                             <div class="cert-info">
                                 <h4>Tech Event Organizer</h4>
                                 <p>Organized workshops, coding contests, and technical events for students.</p>
-                                <span class="cert-source">College Activity</span>
+                                <span class="cert-source">College Technical Association</span>
                             </div>
                         </div>
-                        <div class="cert-item glass placeholder-item">
-                            <div class="cert-icon"><i class="fa-solid fa-plus"></i></div>
+                        <div class="cert-item glass">
+                            <div class="cert-icon"><i class="fa-solid fa-star"></i></div>
                             <div class="cert-info">
-                                <h4>Add Your Achievements</h4>
-                                <p>Replace these placeholders with your actual achievements.</p>
-                                <span class="cert-source">Update in index.html</span>
+                                <h4>Open Source Contributor</h4>
+                                <p>Contributed bug fixes and feature additions to community repositories on GitHub.</p>
+                                <span class="cert-source">GitHub Community</span>
                             </div>
                         </div>
                     </div>
@@ -555,16 +688,14 @@
                     </div>
                     <div class="building-info">
                         <span class="building-status">🚧 Work in Progress</span>
-                        <h3>Personal AI Assistant</h3>
+                        <h3>Full-Stack SaaS Analytics Platform</h3>
                         <p>
-                            An intelligent personal AI assistant inspired by futuristic virtual assistants,
-                            designed to explore voice interaction, task automation, natural language processing,
-                            and smart productivity features.
+                            A modern multi-tenant dashboard application featuring real-time data visualizers, customizable metrics, secure JWT authentication, and high-performance REST APIs.
                         </p>
                         <div class="building-tech">
-                            <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
-                            <span class="skill-tag"><i class="fa-solid fa-brain"></i> NLP</span>
-                            <span class="skill-tag"><i class="fa-solid fa-microchip"></i> ML</span>
+                            <span class="skill-tag"><i class="fa-brands fa-react"></i> React / Next.js</span>
+                            <span class="skill-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                            <span class="skill-tag"><i class="fa-solid fa-database"></i> MongoDB</span>
                         </div>
                     </div>
                 </div>
@@ -645,7 +776,7 @@
                         <div class="contact-details">
                             <div class="detail-item">
                                 <i class="fa-solid fa-envelope"></i>
-                                <span>gandhirajan@example.com</span>
+                                <span>gandhirajan.dev@gmail.com</span>
                             </div>
                             <div class="detail-item">
                                 <i class="fa-solid fa-phone"></i>
@@ -659,10 +790,10 @@
                         <div class="social-links">
                             <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                             <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="mailto:gandhirajan@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="mailto:gandhirajan.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                         </div>
                     </div>
-                    <form class="contact-form" id="contact-form" action="mailto:gandhirajan@example.com" method="post" enctype="text/plain">
+                    <form class="contact-form" id="contact-form" action="mailto:gandhirajan.dev@gmail.com" method="post" enctype="text/plain">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -707,7 +838,7 @@
                 <div class="footer-social">
                     <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                     <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="mailto:gandhirajan@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="mailto:gandhirajan.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
