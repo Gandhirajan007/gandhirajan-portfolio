@@ -24,41 +24,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingElement = document.getElementById('typing-effect');
     const words = [
         'modern web experiences.',
-        'responsive websites.',
-        'Full-Stack web applications.',
-        'scalable backend systems.',
-        'modern database solutions.'
+        'full-stack solutions.',
+        'modern websites.',
+        'clean digital experiences.'
     ];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typeSpeed = 100;
 
     function type() {
+        if (!typingElement) return;
+
         const currentWord = words[wordIndex];
 
         if (isDeleting) {
-            typingElement.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typeSpeed = 40;
+            charIndex = Math.max(0, charIndex - 1);
         } else {
-            typingElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typeSpeed = 120;
+            charIndex = Math.min(currentWord.length, charIndex + 1);
         }
+
+        typingElement.textContent = currentWord.slice(0, charIndex);
+
+        const pause = isDeleting ? 50 : 120;
 
         if (!isDeleting && charIndex === currentWord.length) {
             isDeleting = true;
-            typeSpeed = 2200;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typeSpeed = 400;
+            setTimeout(type, 1800);
+            return;
         }
 
-        setTimeout(type, typeSpeed);
+        if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            setTimeout(type, 350);
+            return;
+        }
+
+        setTimeout(type, pause);
     }
-    if (typingElement) type();
+
+    if (typingElement) {
+        typingElement.textContent = words[0];
+        setTimeout(type, 500);
+    }
 
     // ========================================
     // 3. NAVBAR — Scroll Effect

@@ -714,59 +714,6 @@ img {
     transform: translateY(-3px);
 }
 
-/* HERO STATS CARD */
-.hero-stats-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 560px;
-    padding: 16px 20px;
-    background: rgba(10, 10, 22, 0.7);
-    border: 1px solid rgba(0, 242, 254, 0.25);
-    border-radius: 16px;
-    backdrop-filter: blur(16px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 242, 254, 0.05);
-}
-
-.stat-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.stat-icon {
-    font-size: 1.3rem;
-    color: var(--primary);
-    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
-}
-
-.stat-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-num {
-    font-size: 1.25rem;
-    font-weight: 800;
-    font-family: var(--font-heading);
-    color: #ffffff;
-    line-height: 1.1;
-}
-
-.stat-label {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.stat-divider {
-    width: 1px;
-    height: 32px;
-    background: rgba(255, 255, 255, 0.1);
-}
-
 /* RIGHT HERO VISUAL COL */
 .hero-visual-col {
     position: relative;
@@ -1814,10 +1761,6 @@ body.hovered .custom-cursor-outline {
         justify-content: center;
     }
 
-    .hero-stats-card {
-        margin: 0 auto;
-    }
-
     .hero-visual-col {
         min-height: 440px;
     }
@@ -1906,7 +1849,8 @@ body.hovered .custom-cursor-outline {
     }
 
     html,
-    body {
+    body,
+    #root {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
@@ -1946,12 +1890,14 @@ body.hovered .custom-cursor-outline {
     }
 
     .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        top: 0; right: -100%;
-        width: 100%; height: 100vh;
         background: rgba(6, 6, 11, 0.98);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
@@ -2011,8 +1957,9 @@ body.hovered .custom-cursor-outline {
     }
 
     .hero-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: block;
+        width: 100%;
+        max-width: 100%;
         min-height: auto;
         padding-top: 18px;
         padding-bottom: 24px;
@@ -2020,33 +1967,38 @@ body.hovered .custom-cursor-outline {
 
     .hero-text-col {
         width: 100%;
+        max-width: 100%;
         align-items: center;
         text-align: center;
     }
 
     .sub-title {
-        font-size: clamp(1.2rem, 5vw, 1.55rem);
+        font-size: clamp(22px, 5vw, 26px);
         letter-spacing: 2px;
         margin-bottom: 8px;
     }
 
     .main-title {
-        font-size: clamp(2.5rem, 9vw, 3.2rem);
+        font-size: clamp(36px, 10vw, 48px);
         line-height: 1.05;
         width: 100%;
+        max-width: 100%;
+        white-space: normal;
         word-break: break-word;
     }
 
     .typed-text {
-        font-size: clamp(1.35rem, 5vw, 1.8rem);
+        font-size: clamp(22px, 6vw, 28px);
         line-height: 1.4;
         margin-bottom: 16px;
+        width: 100%;
+        max-width: 100%;
     }
 
     .hero-desc {
         width: 100%;
         max-width: 100%;
-        font-size: clamp(0.98rem, 3.7vw, 1.15rem);
+        font-size: 17px;
         line-height: 1.7;
         margin-bottom: 24px;
     }
@@ -2067,20 +2019,20 @@ body.hovered .custom-cursor-outline {
         max-width: 100%;
         justify-content: center;
         text-align: center;
+        margin-bottom: 14px;
     }
 
     .btn-primary,
-    .btn-outline {
+    .btn-outline,
+    .btn-ghost {
         display: inline-flex;
         width: 100%;
         padding: 14px 20px;
     }
 
     .btn-ghost {
-        display: inline-flex;
-        width: 100%;
+        margin-bottom: 0;
         justify-content: center;
-        margin-top: 2px;
     }
 
     .hero-socials {
@@ -2096,40 +2048,18 @@ body.hovered .custom-cursor-outline {
         height: 42px;
     }
 
-    .hero-stats-card {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px 10px;
-        width: 100%;
-        max-width: 100%;
-        padding: 12px 14px;
-    }
-
-    .stat-divider {
-        display: none;
-    }
-
-    .stat-item {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .stat-info {
-        align-items: center;
-    }
-
     .hero-visual-col {
         position: relative;
         display: block;
         width: 100%;
+        max-width: 100%;
         min-height: auto;
+        margin-top: 18px;
     }
 
     .neon-signature {
         position: relative;
-        top: auto;
-        right: auto;
-        left: auto;
+        inset: auto;
         display: block;
         margin: 0 auto 12px;
         transform: none;
@@ -2142,10 +2072,7 @@ body.hovered .custom-cursor-outline {
         width: 100%;
         max-width: 100%;
         height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: space-between;
+        display: block;
     }
 
     .workspace-img-frame {
@@ -2153,6 +2080,8 @@ body.hovered .custom-cursor-outline {
         height: auto;
         min-height: auto;
         border-radius: 18px;
+        position: relative;
+        margin-top: 0;
     }
 
     .workspace-img {
@@ -2172,12 +2101,16 @@ body.hovered .custom-cursor-outline {
         left: auto !important;
         right: auto !important;
         bottom: auto !important;
-        width: calc(50% - 6px);
-        flex: 0 0 calc(50% - 6px);
-        margin: 0;
+        width: calc(50% - 8px);
+        margin: 10px 0 0;
+        display: inline-flex;
         transform: none !important;
         animation: none !important;
         z-index: 2;
+    }
+
+    .workspace-wrapper .floating-tech-card {
+        display: inline-flex;
     }
 
     .exploring-card {
@@ -2185,10 +2118,10 @@ body.hovered .custom-cursor-outline {
         top: auto;
         right: auto;
         left: auto;
-        width: calc(100% - 32px);
+        width: 100%;
         max-width: 100%;
         height: auto;
-        margin: 16px auto;
+        margin: 24px 0;
         padding: 14px 12px;
         transform: none;
     }
