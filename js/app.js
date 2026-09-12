@@ -416,7 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
         '.section-header',
         '.about-content',
         '.highlight-card',
-        '.timeline-item',
         '.skill-category',
         '.project-card',
         '.cert-item',

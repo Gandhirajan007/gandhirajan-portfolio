@@ -1141,106 +1141,7 @@ img {
 }
 
 /* ========================================
-   8. EDUCATION SECTION — TIMELINE
-   ======================================== */
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 40px;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 15px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, var(--primary), var(--primary-alt), transparent);
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-    padding-left: 30px;
-}
-
-.timeline-item:last-child {
-    margin-bottom: 0;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: -33px;
-    top: 24px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: var(--primary);
-    border: 3px solid var(--bg-dark);
-    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.3), 0 0 15px rgba(var(--primary-rgb), 0.4);
-}
-
-.timeline-card {
-    padding: 32px;
-    transition: var(--transition);
-}
-
-.timeline-card:hover {
-    border-color: rgba(var(--primary-rgb), 0.3);
-    transform: translateX(6px);
-}
-
-.timeline-date {
-    display: inline-block;
-    font-size: 0.78rem;
-    color: var(--primary);
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    padding: 4px 12px;
-    background: rgba(var(--primary-rgb), 0.08);
-    border-radius: 20px;
-}
-
-.timeline-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
-
-.timeline-card .institution {
-    color: var(--primary);
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.timeline-card p {
-    color: var(--text-muted);
-    font-size: 0.92rem;
-    line-height: 1.7;
-}
-
-.timeline-card .grade {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 10px;
-    font-weight: 600;
-    font-size: 0.88rem;
-    color: var(--success);
-}
-
-.timeline-card .grade i {
-    font-size: 0.85rem;
-}
-
-/* ========================================
-   9. SKILLS SECTION
+   8. SKILLS SECTION
    ======================================== */
 .skills-categories {
     display: grid;
@@ -2089,22 +1990,6 @@ body.hovered .custom-cursor-outline {
 
     .contact-info .section-title {
         font-size: 1.6rem;
-    }
-
-    .timeline {
-        padding-left: 30px;
-    }
-
-    .timeline::before {
-        left: 10px;
-    }
-
-    .timeline-dot {
-        left: -27px;
-    }
-
-    .timeline-card {
-        padding: 24px;
     }
 
     .modal-content {
