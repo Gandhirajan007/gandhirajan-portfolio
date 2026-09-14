@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCursor();
 
     // Hover states for interactive elements
-    const interactiveSelector = 'a, button, input, textarea, .overlay-btn, .mobile-toggle, .scroll-down, .profile-card, .cert-item, .skill-tag';
+    const interactiveSelector = 'a, button, input, textarea, .overlay-btn, .mobile-toggle, .scroll-down, .profile-card, .cert-item, .skill-tag, .project-card';
     document.querySelectorAll(interactiveSelector).forEach(el => {
         el.addEventListener('mouseenter', () => document.body.classList.add('hovered'));
         el.addEventListener('mouseleave', () => document.body.classList.remove('hovered'));
@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const index = parseInt(card.getAttribute('data-project'));
             const project = projectsData[index];
 
-            if (project) {
+            if (project && modal) {
                 modalTitle.textContent = project.title;
                 modalDescription.textContent = project.description;
                 modalTags.innerHTML = project.tags.map(t => `<span>${t}</span>`).join('');
@@ -276,20 +276,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function closeModal() {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     }
 
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
     }
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
-    });
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    }
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) closeModal();
     });
 
     // ========================================
