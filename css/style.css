@@ -2388,11 +2388,11 @@ body.hovered .custom-cursor-outline {
     }
 
     .raxx-showcase-section {
-        padding: 60px 0;
+        padding: 55px 0 65px;
     }
 
     .raxx-command-center {
-        padding: 28px 18px;
+        padding: 26px 16px;
         border-radius: 20px;
     }
 
@@ -2401,19 +2401,25 @@ body.hovered .custom-cursor-outline {
     }
 
     .raxx-visual-stage {
-        max-width: 280px;
-        height: 280px;
-        margin: 0 auto;
+        max-width: 290px;
+        height: 290px;
+        margin: 0 auto 10px;
     }
 
-    .holo-ring-outer { width: 270px; height: 270px; }
-    .holo-ring-mid { width: 230px; height: 230px; }
-    .holo-radar-sweep { width: 220px; height: 220px; }
+    .holo-ring-outer { width: 280px; height: 280px; }
+    .holo-ring-mid { width: 240px; height: 240px; }
+    .holo-radar-sweep { width: 230px; height: 230px; }
 
     .robot-frame {
-        width: 190px;
-        height: 190px;
+        width: 200px;
+        height: 200px;
+        max-width: 75vw;
         border-radius: 20px;
+    }
+
+    .raxx-brand-block {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .raxx-brand-title {
@@ -2427,14 +2433,15 @@ body.hovered .custom-cursor-outline {
 
     .raxx-lead-quote {
         font-size: 0.88rem;
-        padding: 0 10px;
+        padding: 0 8px;
     }
 
     .raxx-feature-matrix {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
         width: 100%;
-        max-width: 340px;
+        max-width: 320px;
+        margin: 0 auto 24px;
     }
 
     .raxx-feat-card {
@@ -2454,7 +2461,8 @@ body.hovered .custom-cursor-outline {
 
     .raxx-actions-row {
         width: 100%;
-        max-width: 340px;
+        max-width: 320px;
+        margin: 0 auto;
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
@@ -2622,16 +2630,6 @@ body.hovered .custom-cursor-outline {
 }
 
 /* ========================================
-   19. CURRENTLY BUILDING — RAXX AI COMMAND CENTER
-   ======================================== */
-.raxx-showcase-section {
-    position: relative;
-    padding: 130px 0 140px;
-    overflow: hidden;
-    background: radial-gradient(ellipse at 50% 20%, #031427 0%, #020b16 55%, #01060d 100%);
-}
-
-/* ========================================
    19. CURRENTLY BUILDING — RAXX AI SHOWCASE
    ======================================== */
 .raxx-showcase-section {
@@ -2779,6 +2777,9 @@ body.hovered .custom-cursor-outline {
 /* HOLOGRAPHIC RINGS */
 .holo-ring {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 1;
@@ -2800,6 +2801,9 @@ body.hovered .custom-cursor-outline {
 
 .holo-radar-sweep {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 340px;
     height: 340px;
     border-radius: 50%;
@@ -2810,13 +2814,13 @@ body.hovered .custom-cursor-outline {
 }
 
 @keyframes spin-clockwise {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 @keyframes spin-counter {
-    from { transform: rotate(360deg); }
-    to { transform: rotate(0deg); }
+    from { transform: translate(-50%, -50%) rotate(360deg); }
+    to { transform: translate(-50%, -50%) rotate(0deg); }
 }
 
 /* ROBOT CENTERPIECE */
@@ -2856,6 +2860,7 @@ body.hovered .custom-cursor-outline {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     filter: brightness(1.06) contrast(1.12);
     display: block;
 }
