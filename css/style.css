@@ -1889,12 +1889,12 @@ body.hovered .custom-cursor-outline {
     }
 
     .raxx-command-center {
-        padding: 36px 28px;
+        padding: 36px 30px;
     }
 
     .raxx-command-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 36px;
         text-align: center;
     }
 
@@ -1904,14 +1904,8 @@ body.hovered .custom-cursor-outline {
 
     .raxx-feature-matrix {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    .telemetry-metrics-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .stack-pills-row {
-        justify-content: center;
+        max-width: 500px;
+        width: 100%;
     }
 
     .raxx-actions-row {
@@ -2394,11 +2388,11 @@ body.hovered .custom-cursor-outline {
     }
 
     .raxx-showcase-section {
-        padding: 70px 0;
+        padding: 60px 0;
     }
 
     .raxx-command-center {
-        padding: 24px 16px;
+        padding: 28px 18px;
         border-radius: 20px;
     }
 
@@ -2407,82 +2401,60 @@ body.hovered .custom-cursor-outline {
     }
 
     .raxx-visual-stage {
-        max-width: 340px;
-        height: 340px;
+        max-width: 280px;
+        height: 280px;
         margin: 0 auto;
     }
 
-    .holo-ring-outer { width: 320px; height: 320px; }
-    .holo-ring-mid { width: 270px; height: 270px; }
-    .holo-ring-inner { width: 220px; height: 220px; }
-    .holo-radar-sweep { width: 240px; height: 240px; }
+    .holo-ring-outer { width: 270px; height: 270px; }
+    .holo-ring-mid { width: 230px; height: 230px; }
+    .holo-radar-sweep { width: 220px; height: 220px; }
 
     .robot-frame {
-        width: 180px;
-        height: 180px;
+        width: 190px;
+        height: 190px;
         border-radius: 20px;
     }
 
-    .raxx-node .node-icon-box {
-        width: 32px;
-        height: 32px;
-        font-size: 0.85rem;
-        border-radius: 8px;
-    }
-
-    .raxx-node .node-text {
-        font-size: 0.52rem;
-    }
-
-    .node-ai-core   { top: 6px; }
-    .node-voice     { top: 65px; left: -2px; }
-    .node-home      { top: 125px; left: -14px; }
-    .node-security  { top: 185px; left: -14px; }
-    .node-health    { top: 245px; left: -2px; }
-
-    .node-gestures  { top: 65px; right: -2px; }
-    .node-cameras   { top: 125px; right: -14px; }
-    .node-gps       { top: 185px; right: -14px; }
-    .node-devices   { top: 245px; right: -2px; }
-    .node-automation { bottom: 6px; }
-
     .raxx-brand-title {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 
     .raxx-brand-sub {
-        font-size: 0.82rem;
+        font-size: 0.85rem;
         letter-spacing: 2px;
     }
 
     .raxx-lead-quote {
         font-size: 0.88rem;
-    }
-
-    .raxx-desc-body {
-        font-size: 0.82rem;
+        padding: 0 10px;
     }
 
     .raxx-feature-matrix {
         grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
+        gap: 8px;
+        width: 100%;
+        max-width: 340px;
     }
 
     .raxx-feat-card {
-        padding: 7px 6px;
+        padding: 9px 10px;
+        gap: 8px;
+    }
+
+    .feat-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 0.82rem;
     }
 
     .raxx-feat-card span {
-        font-size: 0.58rem;
-    }
-
-    .telemetry-metrics-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
+        font-size: 0.68rem;
     }
 
     .raxx-actions-row {
         width: 100%;
+        max-width: 340px;
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
@@ -2659,6 +2631,16 @@ body.hovered .custom-cursor-outline {
     background: radial-gradient(ellipse at 50% 20%, #031427 0%, #020b16 55%, #01060d 100%);
 }
 
+/* ========================================
+   19. CURRENTLY BUILDING — RAXX AI SHOWCASE
+   ======================================== */
+.raxx-showcase-section {
+    position: relative;
+    padding: 110px 0 120px;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 20%, #031427 0%, #020b16 55%, #01060d 100%);
+}
+
 .raxx-section-bg {
     position: absolute;
     inset: 0;
@@ -2677,10 +2659,10 @@ body.hovered .custom-cursor-outline {
 
 .raxx-ambient-glow {
     position: absolute;
-    top: 15%;
-    left: 15%;
-    width: 650px;
-    height: 650px;
+    top: 20%;
+    left: 20%;
+    width: 600px;
+    height: 600px;
     background: radial-gradient(circle, rgba(0, 229, 255, 0.12) 0%, rgba(0, 107, 255, 0.06) 45%, transparent 70%);
     filter: blur(90px);
     animation: raxx-ambient-pulse 10s ease-in-out infinite alternate;
@@ -2688,19 +2670,19 @@ body.hovered .custom-cursor-outline {
 
 @keyframes raxx-ambient-pulse {
     0% { transform: scale(1) translate(0, 0); opacity: 0.75; }
-    100% { transform: scale(1.18) translate(30px, -25px); opacity: 1; }
+    100% { transform: scale(1.15) translate(25px, -20px); opacity: 1; }
 }
 
 .raxx-container {
     position: relative;
     z-index: 2;
-    max-width: 1260px;
+    max-width: 1200px;
 }
 
 /* SECTION HEADER */
 .raxx-top-header {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 44px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2752,8 +2734,8 @@ body.hovered .custom-cursor-outline {
     background: rgba(2, 11, 22, 0.88);
     border: 1px solid rgba(0, 229, 255, 0.28);
     border-radius: 28px;
-    padding: 44px 44px 48px;
-    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 229, 255, 0.14);
+    padding: 44px 48px;
+    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 229, 255, 0.12);
     backdrop-filter: blur(28px);
     overflow: hidden;
 }
@@ -2761,8 +2743,8 @@ body.hovered .custom-cursor-outline {
 /* CYBER HUD CORNER BRACKETS */
 .hud-corner {
     position: absolute;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     pointer-events: none;
     z-index: 10;
 }
@@ -2775,46 +2757,23 @@ body.hovered .custom-cursor-outline {
 /* MAIN COMMAND GRID */
 .raxx-command-grid {
     display: grid;
-    grid-template-columns: 1.05fr 1.15fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 48px;
     align-items: center;
 }
 
 /* ========================================
-   LEFT SIDE: VISUAL STAGE & 10 HOLOGRAPHIC NODES
+   LEFT SIDE: VISUAL ROBOT CENTERPIECE
    ======================================== */
 .raxx-visual-stage {
     position: relative;
     width: 100%;
-    max-width: 540px;
-    height: 540px;
+    max-width: 440px;
+    height: 440px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* SVG CIRCUITS */
-.raxx-circuits-svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.circuit-path {
-    stroke: url(#cyanLineGrad);
-    stroke-width: 1.5;
-    fill: none;
-    stroke-dasharray: 6 4;
-    animation: circuit-dash 25s linear infinite;
-    filter: drop-shadow(0 0 4px rgba(0, 229, 255, 0.6));
-}
-
-@keyframes circuit-dash {
-    to { stroke-dashoffset: -1000; }
 }
 
 /* HOLOGRAPHIC RINGS */
@@ -2826,30 +2785,23 @@ body.hovered .custom-cursor-outline {
 }
 
 .holo-ring-outer {
-    width: 500px;
-    height: 500px;
+    width: 420px;
+    height: 420px;
     border: 1px dashed rgba(0, 229, 255, 0.22);
-    animation: spin-clockwise 40s linear infinite;
+    animation: spin-clockwise 35s linear infinite;
 }
 
 .holo-ring-mid {
-    width: 420px;
-    height: 420px;
+    width: 350px;
+    height: 350px;
     border: 1px dotted rgba(0, 107, 255, 0.35);
-    animation: spin-counter 26s linear infinite;
-}
-
-.holo-ring-inner {
-    width: 340px;
-    height: 340px;
-    border: 1px dashed rgba(0, 229, 255, 0.35);
-    animation: spin-clockwise 18s linear infinite;
+    animation: spin-counter 24s linear infinite;
 }
 
 .holo-radar-sweep {
     position: absolute;
-    width: 380px;
-    height: 380px;
+    width: 340px;
+    height: 340px;
     border-radius: 50%;
     background: conic-gradient(from 0deg, transparent 0deg, rgba(0, 229, 255, 0.12) 60deg, transparent 65deg);
     animation: spin-clockwise 8s linear infinite;
@@ -2874,7 +2826,7 @@ body.hovered .custom-cursor-outline {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .robot-frame {
@@ -2939,7 +2891,7 @@ body.hovered .custom-cursor-outline {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 5px 16px;
+    padding: 6px 18px;
     border-radius: 20px;
     background: rgba(3, 17, 31, 0.92);
     border: 1px solid rgba(0, 229, 255, 0.4);
@@ -2964,111 +2916,62 @@ body.hovered .custom-cursor-outline {
     100% { opacity: 1; transform: scale(1.2); }
 }
 
-/* 10 HOLOGRAPHIC CONNECTION NODES */
-.raxx-node {
-    position: absolute;
-    z-index: 6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    cursor: default;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    animation: node-drift 5s ease-in-out infinite alternate;
-}
-
-.node-icon-box {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: rgba(3, 17, 31, 0.88);
-    border: 1.5px solid rgba(0, 229, 255, 0.45);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #00E5FF;
-    font-size: 1.1rem;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 14px rgba(0, 229, 255, 0.3);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-.node-text {
-    font-family: 'Consolas', monospace;
-    font-size: 0.64rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #d8e8f8;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-    white-space: nowrap;
-}
-
-.raxx-node:hover {
-    transform: scale(1.12);
-    z-index: 10;
-}
-
-.raxx-node:hover .node-icon-box {
-    border-color: #00E5FF;
-    background: rgba(0, 229, 255, 0.2);
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.7);
-    color: #ffffff;
-}
-
-.raxx-node:hover .node-text {
-    color: #00E5FF;
-    text-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
-}
-
-@keyframes node-drift {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-6px); }
-}
-
-/* Positioning 10 nodes symmetrically around 540x540 stage */
-.node-ai-core   { top: 18px; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
-.node-ai-core:hover { transform: translateX(-50%) scale(1.12); }
-
-.node-voice     { top: 100px; left: 16px; animation-delay: -1.2s; }
-.node-home      { top: 195px; left: -6px; animation-delay: -2.4s; }
-.node-security  { top: 290px; left: -6px; animation-delay: -3.6s; }
-.node-health    { top: 385px; left: 16px; animation-delay: -4.8s; }
-
-.node-gestures  { top: 100px; right: 16px; animation-delay: -0.6s; }
-.node-cameras   { top: 195px; right: -6px; animation-delay: -1.8s; }
-.node-gps       { top: 290px; right: -6px; animation-delay: -3.0s; }
-.node-devices   { top: 385px; right: 16px; animation-delay: -4.2s; }
-
-.node-automation { bottom: 18px; left: 50%; transform: translateX(-50%); animation-delay: -5.4s; }
-.node-automation:hover { transform: translateX(-50%) scale(1.12); }
-
 /* ========================================
-   RIGHT SIDE: SHOWCASE & COMMAND INTERFACE
+   RIGHT SIDE: SHOWCASE & COMPACT FEATURES
    ======================================== */
 .raxx-interface-col {
     display: flex;
     flex-direction: column;
 }
 
-/* TITLE & BRANDING */
+/* BRANDING */
 .raxx-brand-block {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+}
+
+.raxx-brand-tag-row {
+    margin-bottom: 10px;
+}
+
+.raxx-core-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-family: 'Consolas', monospace;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: rgba(0, 255, 170, 0.08);
+    border: 1px solid rgba(0, 255, 170, 0.3);
+    color: #00ffaa;
+    box-shadow: 0 0 12px rgba(0, 255, 170, 0.2);
+}
+
+.green-beacon {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #00ffaa;
+    box-shadow: 0 0 8px #00ffaa;
+    animation: beacon-pulse 1.2s infinite alternate;
 }
 
 .raxx-brand-title {
     font-family: var(--font-heading);
-    font-size: 3.6rem;
+    font-size: 3.8rem;
     font-weight: 900;
     line-height: 1;
     letter-spacing: 2px;
     color: #00E5FF;
     text-shadow: 0 0 25px rgba(0, 229, 255, 0.6), 0 0 50px rgba(0, 207, 255, 0.3);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .raxx-brand-sub {
     font-family: var(--font-heading);
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 3px;
     color: #ffffff;
@@ -3077,217 +2980,67 @@ body.hovered .custom-cursor-outline {
 
 .raxx-lead-quote {
     font-size: 0.96rem;
-    font-weight: 600;
-    color: #00E5FF;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
-}
-
-.raxx-desc-body {
-    font-size: 0.88rem;
-    line-height: 1.65;
-    color: #94a9c9;
+    font-weight: 500;
+    color: #c8e0ff;
+    line-height: 1.6;
     margin-bottom: 0;
 }
 
-/* 12 FEATURE CARDS MATRIX */
+/* 6 COMPACT FEATURE ICON CHIPS */
 .raxx-feature-matrix {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    margin-bottom: 22px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
 }
 
 .raxx-feat-card {
-    background: rgba(3, 17, 31, 0.7);
-    border: 1px solid rgba(0, 229, 255, 0.22);
-    border-radius: 10px;
-    padding: 9px 8px;
+    background: rgba(3, 17, 31, 0.75);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 12px;
+    padding: 12px 14px;
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
     transition: all 0.25s ease;
     backdrop-filter: blur(8px);
     cursor: default;
 }
 
-.raxx-feat-card i {
+.feat-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #00E5FF;
-    font-size: 0.85rem;
-    transition: transform 0.25s ease;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
 }
 
 .raxx-feat-card span {
-    font-size: 0.64rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #d8e8f8;
+    letter-spacing: 1px;
+    color: #ffffff;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .raxx-feat-card:hover {
-    background: rgba(0, 229, 255, 0.12);
+    background: rgba(0, 229, 255, 0.14);
     border-color: #00E5FF;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0, 229, 255, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.3);
 }
 
-.raxx-feat-card:hover i {
-    transform: scale(1.15);
-    color: #ffffff;
-}
-
-.raxx-feat-card:hover span {
-    color: #ffffff;
-}
-
-/* LIVE TELEMETRY DASHBOARD PANEL */
-.raxx-telemetry-block {
-    background: rgba(2, 9, 18, 0.92);
-    border: 1px solid rgba(0, 229, 255, 0.25);
-    border-radius: 14px;
-    padding: 14px 18px;
-    margin-bottom: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-}
-
-.telemetry-bar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 10px;
-    margin-bottom: 12px;
-    border-bottom: 1px solid rgba(0, 229, 255, 0.12);
-}
-
-.telemetry-label {
-    font-family: 'Consolas', monospace;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: #ffffff;
-}
-
-.core-online-badge {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'Consolas', monospace;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #00ffaa;
-    text-shadow: 0 0 8px rgba(0, 255, 170, 0.6);
-}
-
-.green-beacon {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #00ffaa;
-    box-shadow: 0 0 8px #00ffaa;
-    animation: beacon-pulse 1.2s infinite alternate;
-}
-
-.telemetry-metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
-}
-
-.metric-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 4px;
-    padding: 6px 4px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: border-color 0.2s ease;
-}
-
-.metric-card:hover {
-    border-color: rgba(0, 229, 255, 0.3);
-}
-
-.metric-icon {
-    font-size: 0.85rem;
-    color: #00E5FF;
-}
-
-.metric-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.m-title {
-    font-size: 0.58rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #8fa6c2;
-}
-
-.m-val {
-    font-family: 'Consolas', monospace;
-    font-size: 0.65rem;
-    font-weight: 700;
-}
-
-.val-green { color: #00ffaa; text-shadow: 0 0 6px rgba(0, 255, 170, 0.4); }
-.val-cyan  { color: #00E5FF; text-shadow: 0 0 6px rgba(0, 229, 255, 0.4); }
-
-/* TECHNOLOGY STACK / CAPABILITIES */
-.raxx-stack-block {
-    margin-bottom: 22px;
-}
-
-.stack-label {
-    display: block;
-    font-family: 'Consolas', monospace;
-    font-size: 0.66rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: #8fa6c2;
-    margin-bottom: 8px;
-}
-
-.stack-pills-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-}
-
-.stack-pill {
-    font-size: 0.66rem;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    padding: 5px 10px;
-    border-radius: 6px;
-    background: rgba(0, 107, 255, 0.12);
-    border: 1px solid rgba(0, 229, 255, 0.3);
-    color: #c8e0ff;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.2s ease;
-}
-
-.stack-pill i {
-    color: #00E5FF;
-    font-size: 0.72rem;
-}
-
-.stack-pill:hover {
-    background: rgba(0, 229, 255, 0.18);
-    border-color: #00E5FF;
-    color: #ffffff;
-    box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+.raxx-feat-card:hover .feat-icon {
+    background: #00E5FF;
+    color: #020b16;
+    box-shadow: 0 0 12px #00E5FF;
 }
 
 /* CTA ACTION BUTTONS */
@@ -3301,9 +3054,9 @@ body.hovered .custom-cursor-outline {
     background: linear-gradient(135deg, #00E5FF 0%, #006BFF 100%);
     color: #020b16;
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     letter-spacing: 1.5px;
-    padding: 13px 28px;
+    padding: 14px 30px;
     border-radius: 50px;
     box-shadow: 0 8px 30px rgba(0, 229, 255, 0.45);
     display: inline-flex;
@@ -3325,9 +3078,9 @@ body.hovered .custom-cursor-outline {
     border: 1.5px solid rgba(0, 229, 255, 0.4);
     color: #ffffff;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     letter-spacing: 1.5px;
-    padding: 12px 26px;
+    padding: 13px 28px;
     border-radius: 50px;
     backdrop-filter: blur(10px);
     display: inline-flex;
