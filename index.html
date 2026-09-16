@@ -535,21 +535,56 @@
                     <div class="raxx-command-grid">
                         <!-- LEFT SIDE: AI COMPANION ROBOT CENTERPIECE -->
                         <div class="raxx-visual-stage">
-                            <!-- HOLOGRAPHIC ROTATING RINGS & RADAR SWEEP -->
+                            <!-- ENERGY CORE GLOW (behind everything) -->
+                            <div class="raxx-energy-core"></div>
+
+                            <!-- HOLOGRAPHIC ROTATING RINGS -->
                             <div class="holo-ring holo-ring-outer"></div>
                             <div class="holo-ring holo-ring-mid"></div>
+                            <div class="holo-ring holo-ring-inner"></div>
                             <div class="holo-radar-sweep"></div>
+
+                            <!-- FLOATING PARTICLES -->
+                            <div class="raxx-particle p1"></div>
+                            <div class="raxx-particle p2"></div>
+                            <div class="raxx-particle p3"></div>
+                            <div class="raxx-particle p4"></div>
+                            <div class="raxx-particle p5"></div>
+                            <div class="raxx-particle p6"></div>
+                            <div class="raxx-particle p7"></div>
+                            <div class="raxx-particle p8"></div>
+
+                            <!-- CONNECTION NODES -->
+                            <div class="raxx-node n1"></div>
+                            <div class="raxx-node n2"></div>
+                            <div class="raxx-node n3"></div>
+                            <div class="raxx-node n4"></div>
+                            <div class="raxx-node n5"></div>
 
                             <!-- 3D COMPANION ROBOT DISPLAY -->
                             <div class="raxx-robot-centerpiece">
-                                <div class="robot-frame">
+                                <div class="robot-frame" id="raxxRobotFrame">
                                     <img src="assets/raxx-companion.jpg" alt="RAXX Personal AI Companion Robot" class="robot-artwork">
                                     <div class="robot-glow-overlay"></div>
                                     <div class="robot-scanner-line"></div>
+                                    <!-- EYE STATE OVERLAY (JS controlled) -->
+                                    <div class="robot-eye-overlay" id="raxxEyeOverlay"></div>
                                 </div>
+
+                                <!-- VOICE WAVEFORM -->
+                                <div class="raxx-voice-wave" id="raxxVoiceWave">
+                                    <span class="wave-bar wb1"></span>
+                                    <span class="wave-bar wb2"></span>
+                                    <span class="wave-bar wb3"></span>
+                                    <span class="wave-bar wb4"></span>
+                                    <span class="wave-bar wb5"></span>
+                                    <span class="wave-bar wb6"></span>
+                                    <span class="wave-bar wb7"></span>
+                                </div>
+
                                 <div class="robot-status-badge">
                                     <span class="pulse-beacon"></span>
-                                    <span>AI COMPANION ONLINE</span>
+                                    <span>RAXX CORE ONLINE</span>
                                 </div>
                             </div>
                         </div>

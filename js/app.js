@@ -573,4 +573,108 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ========================================
+    // 15. RAXX ROBOT EXPRESSION STATE MACHINE
+    // ========================================
+    (function initRaxxAnimations() {
+        const eyeOverlay  = document.getElementById('raxxEyeOverlay');
+        const voiceWave   = document.getElementById('raxxVoiceWave');
+        const raxxSection = document.querySelector('.raxx-showcase-section');
+
+        if (!eyeOverlay || !raxxSection) return;
+
+        const states = ['state-listening', 'state-thinking', 'state-speaking', 'state-blink'];
+        // State durations in ms [min, max]
+        const durations = {
+            'state-listening': [3000, 6000],
+            'state-thinking':  [2000, 4500],
+            'state-speaking':  [1800, 4000],
+            'state-blink':     [200,  400],
+        };
+
+        let currentState = null;
+        let stateTimer   = null;
+        let isVisible    = false;
+
+        function randBetween(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        function setEyeState(state) {
+            if (!eyeOverlay) return;
+            // Remove all state classes
+            eyeOverlay.classList.remove(...states);
+            if (state) eyeOverlay.classList.add(state);
+            currentState = state;
+
+            // Show/hide voice waveform for speaking state
+            if (voiceWave) {
+                voiceWave.style.opacity = state === 'state-speaking' ? '1' : '0.6';
+                voiceWave.style.transform = state === 'state-speaking' ? 'scale(1.1)' : 'scale(1)';
+            }
+        }
+
+        function cycleState() {
+            if (!isVisible) return;
+
+            // Occasionally insert a blink before the next main state
+            const shouldBlink = Math.random() < 0.3;
+            const nextStates = states.filter(s => s !== 'state-blink' && s !== currentState);
+            const nextMain   = nextStates[Math.floor(Math.random() * nextStates.length)];
+
+            if (shouldBlink) {
+                setEyeState('state-blink');
+                const blinkDuration = randBetween(...durations['state-blink']);
+                stateTimer = setTimeout(() => {
+                    setEyeState(nextMain);
+                    const dur = randBetween(...durations[nextMain]);
+                    stateTimer = setTimeout(cycleState, dur);
+                }, blinkDuration);
+            } else {
+                setEyeState(nextMain);
+                const dur = randBetween(...durations[nextMain]);
+                stateTimer = setTimeout(cycleState, dur);
+            }
+        }
+
+        function startCycle() {
+            if (stateTimer) return;
+            setEyeState('state-listening');
+            stateTimer = setTimeout(cycleState, 3000);
+        }
+
+        function stopCycle() {
+            if (stateTimer) {
+                clearTimeout(stateTimer);
+                stateTimer = null;
+            }
+            setEyeState(null);
+        }
+
+        // Only animate when RAXX section is visible (performance)
+        const raxxObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    isVisible = true;
+                    startCycle();
+                } else {
+                    isVisible = false;
+                    stopCycle();
+                }
+            });
+        }, { threshold: 0.15 });
+
+        raxxObserver.observe(raxxSection);
+
+        // Mobile tap to cycle state (interactive easter egg)
+        const robotFrame = document.getElementById('raxxRobotFrame');
+        if (robotFrame) {
+            robotFrame.addEventListener('click', () => {
+                clearTimeout(stateTimer);
+                stateTimer = null;
+                cycleState();
+            });
+        }
+    })();
+
 });
