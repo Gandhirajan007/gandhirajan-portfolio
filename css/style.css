@@ -1893,9 +1893,12 @@ body.hovered .custom-cursor-outline {
     }
 
     .raxx-command-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
         text-align: center;
+        width: 100%;
     }
 
     .raxx-interface-col {
@@ -2390,107 +2393,152 @@ body.hovered .custom-cursor-outline {
     .raxx-showcase-section {
         padding: 50px 0 60px;
         scroll-margin-top: 80px;
+        overflow: hidden;
     }
 
     .raxx-top-header {
         margin-bottom: 24px;
     }
 
+    .raxx-container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        box-sizing: border-box;
+    }
+
     .raxx-command-center {
-        padding: 24px 16px;
+        padding: 24px 14px;
         border-radius: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .raxx-main-heading {
         font-size: 2.2rem;
     }
 
+    /* ---- FORCE SINGLE COLUMN ON MOBILE ---- */
     .raxx-command-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100%;
+        box-sizing: border-box;
     }
 
+    /* ---- VISUAL STAGE — contained, no overflow ---- */
     .raxx-visual-stage {
-        max-width: 250px;
-        height: 250px;
+        width: min(280px, 82vw);
+        height: min(280px, 82vw);
+        max-width: 280px;
+        max-height: 280px;
         margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
     }
 
-    .holo-ring-outer { width: 240px; height: 240px; }
-    .holo-ring-mid { width: 210px; height: 210px; }
-    .holo-radar-sweep { width: 200px; height: 200px; }
+    /* Rings stay inside the stage */
+    .holo-ring-outer  { width: min(270px, 80vw); height: min(270px, 80vw); }
+    .holo-ring-mid    { width: min(235px, 70vw); height: min(235px, 70vw); }
+    .holo-ring-inner  { width: min(200px, 60vw); height: min(200px, 60vw); }
+    .holo-radar-sweep { width: min(215px, 64vw); height: min(215px, 64vw); }
+
+    /* Energy core stays in stage */
+    .raxx-energy-core {
+        width: min(160px, 46vw);
+        height: min(160px, 46vw);
+    }
 
     .robot-frame {
-        width: 175px;
-        height: 175px;
-        max-width: 58vw;
+        width: min(175px, 52vw);
+        height: min(175px, 52vw);
+        max-width: none;
         border-radius: 18px;
+        animation: robot-float 5s ease-in-out infinite alternate !important;
     }
 
     .robot-status-badge {
         font-size: 0.68rem;
         padding: 5px 14px;
+        white-space: nowrap;
     }
 
+    /* ---- INTERFACE COLUMN — full width ---- */
     .raxx-interface-col {
         align-items: center;
         text-align: center;
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .raxx-brand-block {
         text-align: center;
         margin-bottom: 16px;
+        width: 100%;
     }
 
     .raxx-brand-title {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
 
     .raxx-brand-sub {
         font-size: 0.85rem;
-        letter-spacing: 2px;
+        letter-spacing: 1.5px;
     }
 
     .raxx-lead-quote {
         font-size: 0.88rem;
         padding: 0 4px;
-        max-width: 320px;
+        max-width: 100%;
         margin: 0 auto;
     }
 
     .raxx-feature-matrix {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
         width: 100%;
-        max-width: 330px;
+        max-width: 100%;
         margin: 0 auto 18px;
+        box-sizing: border-box;
     }
 
     .raxx-feat-card {
         padding: 8px 10px;
         gap: 8px;
+        box-sizing: border-box;
+        min-width: 0;
+    }
+
+    .raxx-feat-card span {
+        font-size: 0.68rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .feat-icon {
         width: 28px;
         height: 28px;
         font-size: 0.82rem;
-    }
-
-    .raxx-feat-card span {
-        font-size: 0.68rem;
+        flex-shrink: 0;
     }
 
     .raxx-status-strip {
         justify-content: center;
         gap: 8px 12px;
         width: 100%;
-        max-width: 330px;
+        max-width: 100%;
         margin: 0 auto 18px;
         padding: 8px 12px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
     }
 
     .status-strip-item {
@@ -2499,7 +2547,7 @@ body.hovered .custom-cursor-outline {
 
     .raxx-actions-row {
         width: 100%;
-        max-width: 330px;
+        max-width: 100%;
         margin: 0 auto;
         flex-direction: column;
         align-items: stretch;
@@ -3422,37 +3470,7 @@ body.hovered .custom-cursor-outline {
    (Ensure animations remain ON at all sizes)
    ======================================== */
 @media (max-width: 768px) {
-    /* Inner ring scaled for mobile */
-    .holo-ring-inner {
-        width: 185px;
-        height: 185px;
-    }
-
-    /* Energy core scaled */
-    .raxx-energy-core {
-        width: 140px;
-        height: 140px;
-    }
-
-    /* Visual stage must be big enough for all effects */
-    .raxx-visual-stage {
-        width: 100%;
-        max-width: 300px;
-        height: 300px;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    /* Robot frame — keep float animation, scale down */
-    .robot-frame {
-        width: 185px;
-        height: 185px;
-        max-width: 56vw;
-        border-radius: 20px;
-        animation: robot-float 5s ease-in-out infinite alternate !important;
-    }
-
-    /* Particles adjust to smaller stage */
+    /* Particles stay inside the stage (overflow:hidden), adjust positions */
     .p1 { top: 15%; left: 10%; }
     .p2 { top: 65%; left: 6%;  }
     .p3 { top: 25%; right: 8%; }
@@ -3476,22 +3494,46 @@ body.hovered .custom-cursor-outline {
 
 @media (max-width: 480px) {
     .raxx-visual-stage {
-        max-width: 270px;
-        height: 270px;
+        width: min(260px, 80vw);
+        height: min(260px, 80vw);
+        max-width: 260px;
+        max-height: 260px;
     }
 
-    .holo-ring-outer { width: 260px; height: 260px; }
-    .holo-ring-mid   { width: 225px; height: 225px; }
-    .holo-ring-inner { width: 195px; height: 195px; }
-    .holo-radar-sweep { width: 215px; height: 215px; }
+    .holo-ring-outer  { width: min(250px, 76vw); height: min(250px, 76vw); }
+    .holo-ring-mid    { width: min(215px, 66vw); height: min(215px, 66vw); }
+    .holo-ring-inner  { width: min(185px, 56vw); height: min(185px, 56vw); }
+    .holo-radar-sweep { width: min(200px, 61vw); height: min(200px, 61vw); }
 
     .raxx-energy-core {
-        width: 150px;
-        height: 150px;
+        width: min(145px, 44vw);
+        height: min(145px, 44vw);
     }
 
     .robot-frame {
-        width: 175px;
-        height: 175px;
+        width: min(165px, 50vw);
+        height: min(165px, 50vw);
+    }
+}
+
+@media (max-width: 360px) {
+    .raxx-command-center {
+        padding: 20px 10px;
+    }
+
+    .raxx-visual-stage {
+        width: min(230px, 88vw);
+        height: min(230px, 88vw);
+        max-width: 230px;
+        max-height: 230px;
+    }
+
+    .robot-frame {
+        width: min(145px, 44vw);
+        height: min(145px, 44vw);
+    }
+
+    .raxx-brand-title {
+        font-size: 2rem;
     }
 }
